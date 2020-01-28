@@ -8,9 +8,7 @@ const dist = path.join(__dirname, "dist");
 module.exports = {
   entry: "./src/index.js",
   entry: {
-    app: "./src/index.js",
-    print: "./src/print.js",
-    another: "./src/another-module.js"
+    app: "./src/index.js"
   },
   devServer: {
     contentBase: dist
@@ -23,11 +21,7 @@ module.exports = {
   ],
   output: {
     filename: "[name].bundle.js",
+    chunkFilename: "[name].bundle.js",
     path: dist
-  },
-  optimization: {
-    splitChunks: {
-      chunks: "all"
-    }
   }
 };
